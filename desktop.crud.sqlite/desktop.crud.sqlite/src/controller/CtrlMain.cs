@@ -14,7 +14,7 @@ using System.Threading.Tasks;
  */
 namespace desktop.crud.sqlite.src.ctrl
 {
-  /*  class CtrlMain
+    class CtrlMain
     {
         private FormMain viewmain;
         private FormAdd viewadd;
@@ -163,5 +163,5 @@ namespace desktop.crud.sqlite.src.ctrl
             );
             return person;
         }
-    }*/
+    }
 }

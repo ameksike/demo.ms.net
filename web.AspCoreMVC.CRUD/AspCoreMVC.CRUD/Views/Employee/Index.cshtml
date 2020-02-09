@@ -1,0 +1,60 @@
+﻿@model IEnumerable<AspCoreMVC.CRUD.Models.Employee>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a> <br>  
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpCod)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Position)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OfficeLocation)
+            </th>
+            <th>
+                <a asp-action="Modify" class="btn btn-success" ><span class="fas fa-bars"></span> Create or Modify</a>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpCod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Position)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OfficeLocation)
+            </td>
+            <td>
+                [
+                <a asp-action="Modify" asp-route-id="@item.EmployeeId">Modify </a>|
+                <a asp-action="Remove" asp-route-id="@item.EmployeeId" onclick="return confirm('Are you sure to delete this record?')">Remove</a>
+                ] - [
+                <a asp-action="Edit" asp-route-id="@item.EmployeeId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.EmployeeId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.EmployeeId">Delete</a>
+                ]
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
