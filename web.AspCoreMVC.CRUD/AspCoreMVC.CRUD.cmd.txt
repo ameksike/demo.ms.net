@@ -1,8 +1,0 @@
-Package Manager Console: Entity Framework Core 2.1.1
-----------------------------
-Add-Migration "InitialCreate"
-Update-Database 
-
-
-----------------------------
-Remove-Migration
