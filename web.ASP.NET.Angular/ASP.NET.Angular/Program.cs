@@ -14,11 +14,18 @@ namespace ASP.NET.Angular
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            CreateWebHostBuilder(args).Build().Run(); //... for older versions 
+            //... BuildWebHost(args).Run();
         }
 
+        /* for older versions */
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>();
+        /*
+        public static IWebHost BuildWebHost(string[] args) => 
+            WebHost.CreateDefaultBuilder(args)
+               .UseStartup<Startup>();
+        */
     }
 }

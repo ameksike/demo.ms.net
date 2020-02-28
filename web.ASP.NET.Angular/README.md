@@ -1,4 +1,4 @@
-
+# Simple Demo App with ASP.NET Core, Angular, Entity Framework and MVC pattern design
 
 # create new project
 - dotnet new --install Microsoft.DotNet.Web.Spa.ProjectTemplates:2.1.1
